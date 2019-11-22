@@ -1,0 +1,31 @@
+{
+  "name": "codex.collaboration",
+  "version": "1.0.0",
+  "description": "WIP: collaboration editing module",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode development --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dronicho/codex.collaboration.git"
+  },
+  "author": "Codex Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dronicho/codex.collaboration/issues"
+  },
+  "homepage": "https://github.com/Dronicho/codex.collaboration#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.6.0",
+    "eslint-loader": "^3.0.2",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
