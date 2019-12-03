@@ -10,7 +10,7 @@ module.exports = (env, argv) => {
         },
         resolve: {
             modules: [path.join(__dirname, 'src'), 'node_modules'],
-            extensions: ['.js', '.ts', '.tsx']
+            extensions: ['.js', '.ts']
         },
         module: {
             rules: [
