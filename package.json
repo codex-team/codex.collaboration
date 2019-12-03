@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/Dronicho/codex.collaboration/issues"
   },
-  "homepage": "https://github.com/Dronicho/codex.collaboration#readme",
+  "homepage": "https://github.com/codex-team/codex.collaboration",
   "devDependencies": {
     "@babel/core": "^7.7.2",
     "@babel/preset-env": "^7.7.1",
