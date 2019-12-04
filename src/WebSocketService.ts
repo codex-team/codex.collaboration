@@ -9,11 +9,11 @@ export class WebSocketService extends NetworkService {
     private timeout: number = 50; // message sending interval
 
     /**
-     * Open and set up WebService
+     * Open and set up WebSocket
      *
      * @constructor
-     * @param {string} url -
-     * @param {callbackType} callback
+     * @param {string} url - server address
+     * @param {callbackType} callback - handler for messages from server
      */
     constructor(url: string, callback: callbackType) {
         super(url, callback);
