@@ -4,9 +4,20 @@ import { callbackType, NetworkService } from "./NetworkService";
  */
 export class WebSocketService extends NetworkService {
 
+    /**
+     * WebSocket instance
+     */
     private socket: WebSocket;
-    private queue: object[]; // message buffer
-    private timeout: number = 50; // message sending interval
+
+    /**
+     * messages buffer
+     */
+    private queue: object[];
+
+    /**
+     * message sending interval
+     */
+    private timeout: number = 50;
 
     /**
      * Open and set up WebService
@@ -20,9 +31,11 @@ export class WebSocketService extends NetworkService {
         console.log(this.url);
         this.socket = new WebSocket(this.url);
         this.socket.onopen = () => {
-            console.log('Opened');
             setInterval(() => this._send(), this.timeout);
             this.listen();
+        };
+        this.socket.onerror = (e: Event) => {
+            console.log(e);
         };
         this.queue = [];
     }
@@ -35,7 +48,6 @@ export class WebSocketService extends NetworkService {
             return;
         }
         this.socket.onmessage = this.callback;
-        console.log('listening for new messages...');
     }
 
     /**
@@ -48,12 +60,11 @@ export class WebSocketService extends NetworkService {
         if (!data) {
             return;
         }
-        console.log('Sent');
         this.socket.send(JSON.stringify(data));
     }
 
     /**
-     * Push new message to messages queue
+     * Push new message to the messages queue
      *
      * @param {Object} data - message to be sent on server
      */

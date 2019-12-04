@@ -1,11 +1,20 @@
-// тип для функций-обработчиков
+/**
+ * handler for messages from server
+ */
 export type callbackType = (data: MessageEvent) => void
 
 /**
  * Abstract class for Network Services
  */
 export abstract class NetworkService {
+    /**
+     * server address
+     */
     protected url: string;
+
+    /**
+     * handler for messages from server
+     */
     protected callback: callbackType;
 
     /**
