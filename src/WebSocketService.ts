@@ -1,4 +1,5 @@
 import { callbackType, NetworkService } from "./NetworkService";
+
 /**
  * NetworkService with WebSocket
  */
